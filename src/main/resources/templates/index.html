@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jendarey Cookie Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+  <!--> /* Additional in-line styles for demonstration purposes */ -->
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        #banner {
+            background-image: url('/image/banner-image.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 5px 0 5px;
+            color: #fff;
+        }
+
+        #banner h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        #banner p {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        #banner a {
+            display: inline-block;
+            background-color: #ff8c00;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #banner a:hover {
+            background-color: #ff6a00;
+        }
+
+        #featured-products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #f6efef;
+            border: 1px solid #dfd8d8;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .product h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 16px;
+        }
+
+        .product .price {
+            font-size: 18px;
+            color: #f60606;
+            margin-top: 10px;
+        }
+
+        .product button {
+            background-color: #3315a0;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #eb0a0a;
+        }
+
+        #about-us {
+            background-color: #dee1e6;
+        }
+
+        #about-us p {
+            font-size: 18px;
+        }
+
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 18px;
+        }
+
+        <!-- Styles for the payment section -->
+        #payment {
+            display: none;
+            padding: 40px;
+        }
+
+        #payment-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #payment-table th, #payment-table td {
+            border: 1px solid #1b17d5;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #payment-table th {
+            background-color: #160bdf;
+            color: #fff;
+        }
+
+        #payment h3 {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+          /* Styles for the host info */
+         #host-info {
+            position: absolute;
+            top: 10px;
+            right: 10px; /* Adjusted to the top-right corner */
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 25px;
+            border-radius: 5px;
+        }
+
+   .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+     width: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+ .custom-button{
+
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+ }
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+ul.horizontal-list {
+  list-style: none;
+  background-color: grey;
+  color: white;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+
+ul.horizontal-list li {
+  display: inline-block;
+  padding: 0 0.5rem;
+  min-width: 7rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Script to display host info... -->
+
+
+
+    <header>
+        <nav>
+            <ul >
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                <li id="hp" value="noOfCartItem()">
+                    <a href="/" >Cart ()</a></li>
+            </ul>
+            <h1 id="list" style="color:red"></h1>
+
+        </nav>
+    </header>
+
+    <section id="banner">
+        <h1>Welcome to Jendarey Cookie Company</h1>
+        <h2>Delicious homemade cookies for every occasion!</h2>
+    </section>
+
+    <section id="featured-products">
+
+
+
+        <!-- Cookie 1 -->
+        <div class="product">
+            <img src="/image/cookie1.jpg" alt="Chocolate Chip Cookie">
+            <h3>Chocolate Chip Cookie</h3>
+            <p>Our classic chocolate chip cookie is a crowd favorite.</p>
+            <p class="price">$3.50</p>
+            <button onclick="addToCart('Chocolate Chip Cookie', 3.50)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 2 -->
+        <div class="product">
+            <img src="/image/cookie2.jpg" alt="Oatmeal Raisin Cookie">
+            <h3>Oatmeal Raisin Cookie</h3>
+            <p>Delicious oatmeal raisin cookies for a healthy treat.</p>
+            <p class="price">$3.00</p>
+            <button onclick="addToCart('Oatmeal Raisin Cookie', 3.00)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 3 -->
+        <div class="product">
+            <img src="/image/cookie3.jpg" alt="Snickerdoodle Cookie">
+            <h3>Snickerdoodle Cookie</h3>
+            <p>A cinnamon and sugar delight for your taste buds.</p>
+            <p class="price">$3.25</p>
+            <button onclick="addToCart('Snickerdoodle Cookie', 3.25)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 4 -->
+        <div class="product">
+            <img src="/image/cookie4.jpg" alt="Macadamia Nut Cookie">
+            <h3>Macadamia Nut Cookie</h3>
+            <p>Buttery and nutty macadamia nut cookies for a rich flavor.</p>
+            <p class="price">$3.75</p>
+            <button onclick="addToCart('Macadamia Nut Cookie', 3.75)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 5 -->
+        <div class="product">
+            <img src="/image/cookie5.jpg" alt="White Chocolate Macadamia Nut Cookie">
+            <h3>White Chocolate Macadamia Nut Cookie</h3>
+            <p>Our classic macadamia nut cookie with a white chocolate twist.</p>
+            <p class="price">$4.00</p>
+            <button onclick="addToCart('White Chocolate Macadamia Nut Cookie', 4.00)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 6 -->
+        <div class="product">
+            <img src="/image/cookie6.jpg" alt="Peanut Butter Cookie">
+            <h3>Peanut Butter Cookie</h3>
+            <p>A peanut butter lover's dream in cookie form.</p>
+            <p class="price">$3.25</p>
+            <button onclick="addToCart('Peanut Butter Cookie', 3.25)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 7 -->
+        <div class="product">
+            <img src="/image/cookie7.jpg" alt="Gingersnap Cookie">
+            <h3>Gingersnap Cookie</h3>
+            <p>Spiced and crispy gingersnap cookies for a unique taste.</p>
+            <p class="price">$3.50</p>
+            <button onclick="addToCart('Gingersnap Cookie', 3.50)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 8 -->
+        <div class="product">
+            <img src="/image/cookie8.jpg" alt="Shortbread Cookie">
+            <h3>Shortbread Cookie</h3>
+            <p>Classic buttery shortbread cookies for a melt-in-your-mouth experience.</p>
+            <p class="price">$3.00</p>
+            <button onclick="addToCart('Shortbread Cookie', 3.00)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 9 -->
+        <div class="product">
+            <img src="/image/cookie9.jpg" alt="Sugar Cookie">
+            <h3>Sugar Cookie</h3>
+            <p>Sweet and simple sugar cookies that melt in your mouth.</p>
+            <p class="price">$2.75</p>
+            <button onclick="addToCart('Sugar Cookie', 2.75)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 10 -->
+        <div class="product">
+            <img src="/image/cookie10.jpg" alt="Chocolate Covered Oreo Cookie">
+            <h3>Chocolate Covered Oreo Cookie</h3>
+            <p>An Oreo cookie covered in rich, creamy chocolate.</p>
+            <p class="price">$3.50</p>
+            <button onclick="addToCart('Chocolate Covered Oreo Cookie', 3.50)">Add to Cart</button>
+        </div>
+        <!-- Cookie 9 -->
+        <div class="product">
+            <img src="/image/cookie9.jpg" alt="Sugar Cookie">
+            <h3>Sugar snack</h3>
+            <p>Sweet and simple sugar cookies that melt in your mouth.</p>
+            <p class="price">$2.75</p>
+            <button onclick="addToCart('Sugar snack', 2.75)">Add to Cart</button>
+        </div>
+
+        <!-- Cookie 11 -->
+        <div class="product">
+            <img src="/image/cookie11.jpg" alt="Chocolate Hazelnut Cookie">
+            <h3>Chocolate Hazelnut Cookie</h3>
+            <p>A rich and decadent cookie made with chocolate chips and hazelnuts.</p>
+            <p class="price">$3.75</p>
+            <button onclick="addToCart('Chocolate Hazelnut Cookie', 3.75)">Add to Cart</button>
+        </div>
+    </section>
+
+<section>
+
+    <!-- Table to display the cart -->
+    <table id="cart-table" class="styled-table">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody id="cart-body">
+        <!-- Cart items will be added here dynamically using JavaScript -->
+        </tbody>
+    </table>
+
+</section>
+
+
+    <section>
+
+    <!-- Checkout button -->
+        <button id="checkout-button" class="custom-button" onclick="checkout()">Checkout</button>
+    </section>
+
+    <!-- Payment page -->
+    <section id="payment">
+        <h2>Payment</h2>
+        <table id="payment-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="payment-body">
+                <!-- Selected cookies and prices will be added here dynamically using JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Payment options -->
+        <h3>Choose a Payment Option:</h3>
+        <ul class="horizontal-list">
+            <li>
+
+        <img src="/image/paypall.png" width="40px" height="40px">
+        <label>
+            <input type="radio" name="payment-option" value="paypal"> PayPal
+        </label>
+            </li>
+            <li>
+        <img src="/image/vemo.png" width="40px" height="40px">
+        <label>
+            <input type="radio" name="payment-option" value="venmo">Venmo
+        </label>
+            </li>
+            <li>
+                <img src="/image/bank.jpg" width="40px" height="40px">
+        <label>
+            <input type="radio" name="payment-option" value="bank transfer">Bank Transfer
+        </label>
+            </li>
+
+            <li>
+                <img src="/image/master.png" width="50px" height="40px">
+                <label>
+                    <input type="radio" name="payment-option" value="mastercard">MasterCard
+                </label>
+            </li>
+
+            <li>
+                <img src="/image/america-express.jpg" width="40px" height="40px">
+                <label>
+                    <input type="radio" name="payment-option" value="america express">America Express
+                </label>
+            </li>
+            <li>
+                <img src="/image/discover.png" width="50px" height="40px">
+                <label>
+                    <input type="radio" name="payment-option" value="discover">Discover
+                </label>
+            </li>
+
+            <li>
+                <img src="/image/visa.png" width="40px" height="40px">
+                <label>
+                    <input type="radio" name="payment-option" value="visa">Visa
+                </label>
+            </li>
+
+
+
+
+            <!-- Payment button -->
+
+        </ul>
+
+    </section>
+    <section>
+    <button id="pay-button" class="custom-button" onclick="processPayment()">Pay Now</button>
+
+    </section>
+
+
+
+    <footer>
+        &copy; 2023 Jendarey Cookie Company. All rights reserved.
+    </footer>
+
+    <!-- Script to display host info... -->
+    </button>
+
+</body>
+
+<script src="/js/jendarey.js"></script>
+
+
+<script>
+    function noOfCartItem(){
+
+
+var oRows = document.getElementById('cart-table').getElementsByTagName('tr');
+var iRowCount = oRows.length;
+console.log(iRowCount)
+
+
+
+
+
+ var headerElement = document.getElementById('hp');
+ headerElement.textContent= `cart (${iRowCount-1})`
+
+
+
+
+
+
+
+
+return iRowCount;
+//-->
+}
+</script>
+</html>

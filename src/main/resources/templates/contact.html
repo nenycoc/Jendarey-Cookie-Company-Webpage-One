@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/css/header.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+   margin-left: 8px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #e71111;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #5bc5d1;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul >
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="contact">Contact Us</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<h1 style="display: flex;justify-content: center; color:purple">Contact Form</h1>
+<section>
+  <h1  style="display: flex;justify-content: center;">
+    If you have any questions or feedback, please feel free to contact us using the form below:
+  </h1>
+</section>
+<div class="container" style="padding:50px">
+  <form action="/">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your First Name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="Usa">United States</option>
+      <option value="Canada">Canada</option>
+      <option value="England">England</option>
+      <option value="Nigeria">Nigeria</option>
+      
+      
+      
+    </select>
+
+    <abel for="subject">Subject</abel>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
