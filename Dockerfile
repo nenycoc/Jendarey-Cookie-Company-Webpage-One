@@ -18,8 +18,8 @@ EXPOSE 8080
 CMD ["catalina.sh", "run"]
 
 # docker build . -t jendaredocker/jendarey-cookie-company-webpage-main
-# docker run -d -p 14000:8080 --name=voting-app4 jendaredocker/Jendarey-cookie-company-webpage-main:latest
-# docker run -d -p 16000:8080 --name=cookies-web jendaredocker/jendarey-cookie-company-webpage-main:latest
+# docker run -d -p 18000:8080 --name=voting-app4 jendaredocker/jendarey-cookie-company-webpage-main:latest
+# docker run -d -p 19000:8080 --name=cookies-web jendaredocker/jendarey-cookie-company-webpage-main:latest
 
 
 
