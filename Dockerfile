@@ -17,8 +17,8 @@ EXPOSE 8080
 # Define the default command to start Tomcat
 CMD ["catalina.sh", "run"]
 
-# docker build . -t jendaredocker/Jendarey-Cookie-Company-Webpage-main
-# docker run -d -p 14000:8080 --name=voting-app4 jendaredocker/Jendarey-Cookie-Company-Webpage-main:latest
+# docker build . -t jendaredocker/jendarey-cookie-company-webpage-main
+# docker run -d -p 14000:8080 --name=voting-app4 jendaredocker/Jendarey-cookie-company-webpage-main:latest
 # docker run -d -p 16000:8080 --name=cookies-web jendaredocker/jendarey-cookie-company-webpage-main:latest
 
 
