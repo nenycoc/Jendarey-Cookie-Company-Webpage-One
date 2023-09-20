@@ -73,7 +73,7 @@
 		</snapshotRepository>
 	</distributionManagement>
 	<build>
-	<finalName>JendareyCookiesWebpage</finalName>
+	<finalName>cookieweb</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
