@@ -57,21 +57,22 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
-		
 	</dependencies>
-    <distributionManagement>
-		<repository>
-			<id>nexus</id>
-			<name>Jendarey Technologies Releases Nexus Repository</name>
-			<url>http://34.228.220.53:8081/jendarey/repository/web-releases/</url>
-		</repository>
 
-		<snapshotRepository>
-			<id>nexus</id>
-			<name>Jendarey Technologies Snapshot Nexus Repository</name>
-			<url>http://34.228.220.53:8081/jendarey/repository/web-snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
+      <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Jendarey Technologies Releases Nexus Repository</name>
+            <url>http://34.227.93.1:8081/jendarey/repository/cookies-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Jendarey Technologies Snapshot Nexus Repository</name>
+            <url>http://34.227.93.1:8081/jendarey/repository/cookies-snapshots/</url> 
+        </snapshotRepository>
+       </distributionManagement>
+	
 	<build>
 	<finalName>cookieweb</finalName>
 		<plugins>
