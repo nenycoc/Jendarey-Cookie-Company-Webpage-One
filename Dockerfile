@@ -1,5 +1,5 @@
 # Use the official Tomcat image as the base image
-FROM tomcat:10.1.13-jdk17
+FROM tomcat:10.1.14-jdk17
 
 # Set metadata for the image
 LABEL author="Akin"
@@ -18,8 +18,8 @@ EXPOSE 8080
 CMD ["catalina.sh", "run"]
 
 # docker build . -t jendaredocker/jendarey-cookie-company-webpage-main
-# docker run -d -p 18000:8080 --name=cookies-webpage jendaredocker/jendarey-cookie-company-webpage-main:latest
-# docker run -d -p 19000:8080 --name=cookies-web jendaredocker/jendarey-cookie-company-webpage-main:latest
+# docker run -d -p 18900:8080 --name=cookies-webpage jendaredocker/jendarey-cookie-company-webpage-main:v1
+# docker run -d -p 19900:8080 --name=cookies-web jendaredocker/jendarey-cookie-company-webpage-main:v2
 
 
 
