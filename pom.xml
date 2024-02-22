@@ -16,7 +16,7 @@
 	<description>Jendarey Cookie Company Website Project on Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
-		<sonar.host.url>http:44.204.48.146:9000/</sonar.host.url>
+		<sonar.host.url>http:44.202.25.122:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin123</sonar.password>
 	</properties>
